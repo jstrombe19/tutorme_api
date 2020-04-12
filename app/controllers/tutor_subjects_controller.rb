@@ -37,11 +37,11 @@ class TutorSubjectsController < ApplicationController
   end
 
   def destroy 
-    if @user 
-      if @user.destroy 
+    if @tutor_subject 
+      if @tutor_subject.destroy 
         redirect_to "http://localhost:3000/tutor_subjects"
       else
-        render @user.errors.messages 
+        render @tutor_subject.errors.messages 
       end
     else
       render status: 401
