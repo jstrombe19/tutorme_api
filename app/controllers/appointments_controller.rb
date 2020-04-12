@@ -9,7 +9,15 @@ class AppointmentsController < ApplicationController
 
   def show 
     if @appointment 
-      render json: @appointment, include: [:subject, :tutor, :student]
+      render json: @appointment, :include => {
+        :subject => {},
+        :tutor => {
+          :only => [:name, :email, :experience]
+        },
+        :student => {
+          :only => [:name, :email]
+        }
+      }
     else
       render status: 404
     end
