@@ -39,7 +39,7 @@ class SubjectsController < ApplicationController
   def destroy 
     if @subject 
       if @subject.destroy 
-        redirect_to "http://localhost:3000/subjects"
+        redirect_to "https://tutorme-api-beta.herokuapp.com/subjects"
       else
         render status: 422
       end
@@ -57,5 +57,5 @@ class SubjectsController < ApplicationController
   def find_subject_by_id
     @subject = Subject.find(params[:id])
   end
-  
+
 end

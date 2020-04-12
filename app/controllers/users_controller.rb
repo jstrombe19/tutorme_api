@@ -76,7 +76,7 @@ class UsersController < ApplicationController
   def destroy 
     if @user 
       @user.destroy 
-      redirect_to "http://localhost:3000/users"
+      redirect_to "https://tutorme-api-beta.herokuapp.com/users"
     else
       render status: 422
     end

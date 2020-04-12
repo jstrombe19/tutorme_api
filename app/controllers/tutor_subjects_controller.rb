@@ -39,7 +39,7 @@ class TutorSubjectsController < ApplicationController
   def destroy 
     if @tutor_subject 
       if @tutor_subject.destroy 
-        redirect_to "http://localhost:3000/tutor_subjects"
+        redirect_to "https://tutorme-api-beta.herokuapp.com/tutor_subjects"
       else
         render @tutor_subject.errors.messages 
       end

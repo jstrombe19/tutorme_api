@@ -47,7 +47,7 @@ class AppointmentsController < ApplicationController
   def destroy 
     if @appointment 
       if @appointment.destroy 
-        redirect_to "http://localhost:3000/appointments"
+        redirect_to "https://tutorme-api-beta.herokuapp.com/appointments"
       else
         render @appointment.errors.messages 
       end
