@@ -24,8 +24,10 @@ class UsersController < ApplicationController
         render json: @user, :include => {
           :appointments => {
             :include => {
-              :subjects => {},
-              :tutors => {}
+              :subject => {},
+              :tutor => {
+                :only => [:name, :email, :experience]
+              }
             }
           }
         }
@@ -33,19 +35,23 @@ class UsersController < ApplicationController
           render json: @user, :include => {
             :appointments => {
               :include => {
-                :subjects => {},
-                :tutors => {}
+                :subject => {},
+                :tutor => {
+                  :only => [:name, :email, :experience]
+                }
               }
             },
             :student_appointments => {
               :include => {
-                :students => {},
-                :subjects => {}
+                :student => {
+                  :only => [:name, :email]
+                },
+                :subject => {}
               }
             },
             :tutor_subjects => {
               :include => {
-                :subjects => {}
+                :subject => {}
               }
             }
           }
