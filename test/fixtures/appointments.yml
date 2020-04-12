@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appointment_date: 2020-04-11
+  appointment_time: 2020-04-11 18:27:52
+  communication_medium: MyString
+  appointment_duration: 1
+  rating: 1
+  comments: MyText
+  student_id: 1
+  tutor_id: 1
+  subject_id: 1
+
+two:
+  appointment_date: 2020-04-11
+  appointment_time: 2020-04-11 18:27:52
+  communication_medium: MyString
+  appointment_duration: 1
+  rating: 1
+  comments: MyText
+  student_id: 1
+  tutor_id: 1
+  subject_id: 1
