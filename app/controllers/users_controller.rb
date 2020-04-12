@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action only: [:update, :destroy, :profile]
+  before_action only: [:update, :destroy, :profile] do
     authorized_user?(request)
   end
 
